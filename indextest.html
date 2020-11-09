@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<!-- 	<iframe src='https://view.officeapps.live.com/op/view.aspx?src=http://luanxuecheng.imwork.net/aaaa/bbbb.xlsx' -->
+<!-- 		width='100%' frameborder='1' style="height: 100vh" /> -->
+<!-- 	<a href="https://view.officeapps.live.com/op/view.aspx?src=http://luanxuecheng.imwork.net/aaaa/bbbb.xlsx" -->
+<!-- 		target="_blank">我勒个去</a> -->
+<!-- 	<img alt="" id="" -->
+<!-- 		src="http://almsc.hoptest.haier.net:8899/api/ssccommon/v1/file/downloadFile?field=2266a0df-1cc8-4b2b-b640-549517cf2052"> -->
+<script type="text/javascript">
+    $.ajax({
+        "url" : "http://103.120.225.186:9003/hipass/h5/goApply/page",
+        "type" : "post",
+        "async" : false,
+        "contentType" : "application/json",
+        "dataType" : "JSON",
+        "data" : JSON.stringify({}),
+        "success" : function(data) {
+            console.log(data)
+            alert(JSON.stringify(data));
+        },
+        "error" : function(data) {
+            console.log(data)
+        }
+    });
+</script>
+</body>
+</html>
