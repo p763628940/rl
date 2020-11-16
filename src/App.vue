@@ -12,6 +12,7 @@
             }
         },
         created() {
+            this.fresh()
         },
         computed:{
 
@@ -20,6 +21,14 @@
             // this.getData();
         },
         methods: {
+            fresh(){
+                let tag = sessionStorage.getItem("fresh")
+                if(!tag){
+                    sessionStorage.setItem("fresh",'istrue')
+                    let datestr =new Date()
+                    window.location.href='index.html?t='+datestr.getTime()
+                }
+            }
         }
     };
 </script>
